@@ -1,0 +1,6 @@
+ SELECT * FROM T149A
+                 INTO TABLE LT_T149A
+                  FOR ALL ENTRIES IN LT_X001
+                  WHERE BWKEY = LT_X001-BWKEY
+        %_HINTS ORACLE '&max_in_blocking_factor 1000&'
+        ORACLE '&max_blocking_factor 1000&'.
